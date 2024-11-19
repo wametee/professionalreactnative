@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, StyleSheet } from 'react-native';
 
+// Dish Component
+// Demonstrates the use of multiple prop types with PropTypes.oneOfType
 class Dish extends Component {
     // Define prop types using `PropTypes.oneOfType`
     static propTypes = {
@@ -15,6 +17,10 @@ class Dish extends Component {
     };
 
     render() {
+        // Destructuring `name` from `this.props`
+        // Purpose:
+        // - Simplifies access to the `name` prop by avoiding repetitive `this.props.name` references.
+        // - Improves readability and makes the code cleaner.
         const { name } = this.props;
 
         return (
